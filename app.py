@@ -1,4 +1,4 @@
-from flask import Flask, render_template,methods, url_for, redirect, session
+from flask import Flask, render_template, url_for, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
@@ -24,7 +24,7 @@ def hostel_details():
     }
     return render_template("hostel_detail.html",hostel=hostel)
 
-@app.route("/login", methods = ["GET","POST"])
+@app.route("/login")
 
 def login():
     
