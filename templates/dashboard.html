@@ -1,0 +1,81 @@
+<!-- dashboard.html -->
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+    <!-- dashboard.html -->
+
+    <div class="container mt-5">
+        <h1 class="text-center">Admin Dashboard</h1>
+
+        <h2 class="text-center">Hostels</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price per Room</th>
+                    <th>Total Rooms</th>
+                    <th>Available Rooms</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for hostel in hostels %}
+                <tr>
+                    <td>{{ hostel.name }}</td>
+                    <td>{{ hostel.price_per_room }}</td>
+                    <td>{{ hostel.total_rooms }}</td>
+                    <td>{{ hostel.available_rooms }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h1 class="text-center">Bookings</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Contact</th>
+                    <th>Hostel</th>
+                    <th>Room Number</th>
+                    <th>Date Booked</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.user.name }}</td>
+                    <td>{{ booking.user.contact }}</td>
+                    <td>{{ booking.hostel.name }}</td>
+                    <td>{{ booking.room_number }}</td>
+                    <td>{{ booking.date_booked }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h1 class="text-center">Users</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Admin</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.contact }}</td>
+                    <td>{{ user.is_admin }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock%}
+               

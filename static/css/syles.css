@@ -1,3 +1,40 @@
+html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.navbar-custom {
+    background-color: #1A202C;
+    color: white;
+}
+.footer-custom {
+    background-color: #2D3748;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+.main-content {
+    flex: 1; /* This allows the content to take up remaining space */
+}
+.card-img {
+    height: 300px;
+    object-fit: cover;
+}
+.carousel-item img {
+    height: 400px; /* Adjust this height as needed */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+.social-links a {
+color: white;
+font-size: 24px;
+transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+color: #4CAF50; /* Change this color as desired for hover effect */
+}
 
 * {
     padding: 0;
@@ -20,7 +57,7 @@ a {
 }
 
 a:hover {
-    text-decoration: nonw;
+    text-decoration: none;
 }
 
 li {
